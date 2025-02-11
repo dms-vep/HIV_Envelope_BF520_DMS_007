@@ -15,14 +15,14 @@ docs: docs  # typically will be `docs` for real pipelines
 # ----------------------------------------------------------------------------
 
 # Name of your main GitHub repo, eg https://github.com/<my_organization>/<my_repo>
-github_repo_url: https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3
+github_repo_url: https://github.com/dms-vep/HIV_Envelope_BF520_DMS_007
 # GitHub blob path to where results files are stored. Typically "{repo}/blob/{branch}",
 # the "test_example" below is specific to this test example being within the pipeline
 # and should not be needed for other pipelines.
-github_blob_url: https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3/blob/main/
+github_blob_url: https://github.com/dms-vep/HIV_Envelope_BF520_DMS_007/blob/main/
 # Some descriptions and metadata about the analysis.
-description: Deep mutational scanning using HIV Envelope strain BF520. Analysis uses dms-vep-pipeline-3
-year: 2023
+description: Deep mutational scanning using HIV Envelopes BF520 and TRO11 to identify mutations that escape neutralization by antibody 007 and other V3-targeting antibodies
+year: 2025
 authors: Caelan Radford and Jesse Bloom
 
 # ----------------------------------------------------------------------------
@@ -93,7 +93,7 @@ illumina_barcode_parser_params:
 # For each variable, set to "null" or just don't provide if you aren't doing that type
 # of analysis. Otherwise provide path to configuration for that analysis.
 
-func_effects_config: data/func_effects_config.yml  # Functional effects of mutations
+func_effects_config: null  # Functional effects of mutations
 antibody_escape_config: data/antibody_escape_config.yml  # Antibody/serum escape
-summaries_config: null  # Summaries across assays
+summaries_config: data/summaries_config.yml  # Summaries across assays
 
